@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #12001f, #05010a 60%, #000);
+    overflow: hidden;
+    color: #e5e7eb;
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+    font-size: 48px;
+    letter-spacing: 6px;
+    color: #c084fc;
+    text-shadow: 0 0 25px rgba(192,132,252,0.35);
+    animation: glowText 3s infinite ease-in-out;
+}
+
+@keyframes glowText {
+    0%,100% { text-shadow: 0 0 20px rgba(192,132,252,0.25); }
+    50% { text-shadow: 0 0 40px rgba(168,85,247,0.55); }
+}
+
+.subtitle {
+    margin-top: 10px;
+    margin-bottom: 45px;
+    color: #a1a1aa;
+}
+
+.grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    width: 250px;
+    height: 160px;
+    text-decoration: none;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(168,85,247,0.15);
+    backdrop-filter: blur(14px);
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.05);
+    border-color: rgba(168,85,247,0.6);
+    box-shadow: 0 0 40px rgba(168,85,247,0.25);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(168,85,247,0.18), transparent 60%);
+    transform: rotate(20deg);
+    animation: shine 6s infinite linear;
+}
+
+@keyframes shine {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.inner {
+    position: relative;
+    padding: 30px;
+    text-align: center;
+}
+
+.inner h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.inner span {
+    font-size: 13px;
+    color: #a1a1aa;
+}
+
+.hpp h2 {
+    color: #a78bfa;
+    text-shadow: 0 0 12px rgba(167,139,250,0.5);
+}
+
+.json h2 {
+    color: #c084fc;
+    text-shadow: 0 0 12px rgba(192,132,252,0.5);
+}
+
+.card:active {
+    transform: scale(0.97);
+}

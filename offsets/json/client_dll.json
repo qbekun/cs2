@@ -7410,21 +7410,6 @@
           "SYNC_WAIT_FOR_COMPLETION": 0
         },
         "type": "uint32"
-      },
-      "_V3Я_": {
-        "alignment": 0,
-        "members": {},
-        "type": "unknown"
-      },
-      "__3Я_": {
-        "alignment": 0,
-        "members": {},
-        "type": "unknown"
-      },
-      "_o3Я_": {
-        "alignment": 0,
-        "members": {},
-        "type": "unknown"
       }
     }
   }
